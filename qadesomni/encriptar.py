@@ -1,19 +1,19 @@
 from flask import Flask
-class CustomMessage():
+class CustomMessageEE():
     """ Clase para el menejo de mensajes. """
 
     LETTER_BY_NUMBERS = {
        
-            'K':'1',
-            'C':'2',
-            'J':'3',
-            'X':'4',
-            'B':'5',
-            'Z':'6',
-            'E':'7',
-            'L':'8',
-            'V':'9',
-            'W':'0', 
+            '1':'K',
+            '2':'C',
+            '3':'J',
+            '4':'X',
+            '5':'B',
+            '6':'Z',
+            '7':'E',
+            '8':'L',
+            '9':'V',
+            '0':'W', 
     }
 
     def __init__(self, message):
@@ -47,30 +47,17 @@ class CustomMessage():
 
 
 
-def start():
-    """ Método para iniciar el proceso de conversión de letras a números. """
-    message = str(input("Escribe tu mensaje: "))
-    m = CustomMessage(message)
-    new_message = m.substitute_letters_by_numbers()
-    print("<------------------------------------------------->")
-    print(new_message)
-    print("<------------------------------------------------->")
-
-
-
 
 app= Flask(__name__)
-
 @app.route('/app/v1/descriptar/<id>')
-def users_action(id):
+def start():
         if(id=="8"):
-             m = CustomMessage(id)
-             new_message = m.substitute_letters_by_numbers()
-             return "IF"+new_message
+            #  inst=users_action()
+            #  m=des.CustomMessage(id)
+            #  new_message = des.substitute_numbers_by_letters()
+             return "IF" 
         else:
             m = CustomMessage(id)
             new_message = m.substitute_letters_by_numbers()
-            return "El numero adasdde tSSarjeta es: "+new_message
-
-
-app.run(debug=True,port=5000) 
+              
+            return "El numero de tarjeta essirve?: "+new_message

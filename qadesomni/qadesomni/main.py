@@ -70,7 +70,6 @@ def users_action(id):
         else:
             m = CustomMessage(id)
             new_message = m.substitute_letters_by_numbers()
-            return "El numero adasdde tSSarjeta es: "+new_message
+            return "El numero de tarjeta es: "+new_message
 
-
-app.run(debug=True,port=5000) 
+app.run(debug=True,port=8080)
